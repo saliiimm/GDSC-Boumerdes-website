@@ -1,9 +1,8 @@
 import React from 'react'
 import image from '../assets/logo-white.png';
-import '../App.css'
 const Footer = () => {
   return (
-    <div className='flex flex-col bottom-0 absolute'>
+    <div className='flex flex-col bottom-0 '>
       <div className='flex justify-around px-3 py-20 md:p-20  bg-blue  w-screen h-[350px]  ' >
         <div className="logo-desc">
         <img

@@ -1,5 +1,6 @@
 import React from 'react'
 import image from '../assets/logo-white.png';
+import '../App.css'
 const Footer = () => {
   return (
     <div className='flex flex-col bottom-0 '>

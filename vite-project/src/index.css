@@ -3,7 +3,7 @@
 @import 'tailwindcss/utilities';
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300&family=Montserrat:wght@100&display=swap');
 body, html{
-body,html,.app,#root{
+
     overflow-x: hidden;
   
 }

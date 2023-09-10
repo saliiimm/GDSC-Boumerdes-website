@@ -14,6 +14,7 @@
     "@mui/material": "^5.14.8",
     "@mui/styled-engine": "^5.14.8",
     "autoprefixer": "^10.4.15",
+    "axios": "^1.5.0",
     "formik": "^2.4.4",
     "postcss": "^8.4.29",
     "postcss-cli": "^10.1.0",

@@ -5,10 +5,10 @@ export default {
   theme: {
     extend: {
       screens: {
+        'lg': '1440px',
         'med':'910px',
         'medi':'767px',
         'xs': '400px',
-        'lg': '1440px',
         '2xs': '300px',
       },
     },

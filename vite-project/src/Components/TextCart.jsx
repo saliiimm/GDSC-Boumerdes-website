@@ -16,7 +16,7 @@ function TextCart(props) {
           Recusandae quaerat ratione exercitationem at, quas repudiandae magni.
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem
           alias cumque earum, id voluptatum officiis molestias veniam quidem ad
-          facere hey
+          facere!
         </p>
       </div>
       <div className="cart w-[350px] h-[249px] sm:w-[580px] sm:h-[299px] lg:w-[429px] lg:h-[499px] flex-shrink-0 bg-gray-300"></div>

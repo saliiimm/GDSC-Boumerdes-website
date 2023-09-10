@@ -20,6 +20,12 @@
 .bg-blue {
   background: #4285f4;
 }
+.text-bleu{
+  color: #4285f4;
+}
+.text-jaune{
+  color: #FBBC04;
+}
 .bg-blue-2 {
   border-color: #1f69e2;
 }

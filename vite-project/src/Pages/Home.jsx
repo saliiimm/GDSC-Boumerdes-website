@@ -12,6 +12,7 @@ const Home = () => {
   return (
     <div className='bg-gradient-to-tr from-orange-50 to-cyan-100 via-white  overflow-hidden'>
         <Nav/>
+        <Main/>
         <Sponsor/>
         <FindUs/>
         <Contact/>

@@ -43,7 +43,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className={`flex px-4 items-center absolute w-[100%] h-20 justify-between md:px-8 shadow-md z-10`}>
+    <nav className={`flex px-4 bg-white items-center fixed w-[100%] h-20 justify-between md:px-8 shadow-md z-10`}>
       <div>
         <img
           className="w-40 h-5 md:w-52 md:h-6"
@@ -65,7 +65,7 @@ const Nav = () => {
         />
       </div>
       <div
-        className={`menu-burger  md:hidden w-72 h-[89.3vh] absolute top-[80px] duration-200 right-0 ${navWidth}`}
+        className={`menu-burger  md:hidden w-72 h-[100.3vh] absolute top-[80px] duration-200 right-0 ${navWidth}`}
         ref={navRef}
       >
         <ul className="bg-white flex gap-10 flex-col h-full items-center pt-7 shadow-lg">

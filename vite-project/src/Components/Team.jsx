@@ -1,5 +1,7 @@
 import { React, useState, useEffect } from "react";
 import axios from "axios";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../firebase";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "../App.css";
@@ -9,19 +11,29 @@ import rightBtn from "../assets/rightbutton.svg";
 import leftBtn from "../assets/leftbutton.svg";
 
 const Team = () => {
-  const [membres, setMembres] = useState([]);
+  const [mainmembers, setMainMembers] = useState([]);
   const swiper = useSwiper();
+
   useEffect(() => {
-    axios
-      .get("../../db.json")
-      .then((response) => {
-        const data = response.data;
-        setMembres(data.membres);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    getMainMembers();
   }, []);
+
+  useEffect(() => {
+    console.log(mainmembers);
+  }, [mainmembers]);
+
+  function getMainMembers() {
+    const mainCollectionRef = collection(db, "clubMembrers");
+    getDocs(mainCollectionRef)
+      .then((response) => {
+        const membres = response.docs.map((doc) => ({
+          data: doc.data(),
+          id: doc.id,
+        }));
+        setMainMembers(membres);
+      })
+      .catch((error) => console.log(error.message));
+  }
   return (
     <div className="flex items-center justify-center flex-col mt-20">
       <h2 className="text-6xl font-bold text-red-500 mb-10">Our team</h2>
@@ -50,19 +62,19 @@ const Team = () => {
           }}
           modules={[Autoplay, Navigation]}
           className="mySwiper">
-          {membres.map((membre) => (
-            <SwiperSlide key={membre.id}>
+          {mainmembers.map((mainmember) => (
+            <SwiperSlide key={mainmember.id}>
               <div className="flex items-center justify-center flex-col w-60 h-72 shadow-md bg-white rounded-lg">
                 <img
-                  src={membre.img}
+                  src={mainmember.data.lienPhoto}
                   alt="Profile picture"
                   className="mb-10 w-24 h-24  rounded-full"
                 />
                 <h4 className="text-xl font-bold text-gray-800 mb-3">
-                  {membre.fullName}
+                  {mainmember.data.fullName}
                 </h4>
                 <h5 className=" text-gray-500 font-sans text-center font-light">
-                  {membre.role}
+                  {mainmember.data.role}
                 </h5>
               </div>
             </SwiperSlide>

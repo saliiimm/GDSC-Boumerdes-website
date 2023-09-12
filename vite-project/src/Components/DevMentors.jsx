@@ -9,34 +9,35 @@ import { useSwiper } from "swiper/react";
 import rightBtn from "../assets/rightbutton.svg";
 import leftBtn from "../assets/leftbutton.svg";
 
-const Acitivities = () => {
-  const [activities, setActivities] = useState([]);
+const DevMentors = () => {
+  const [mentors, setMentors] = useState([]);
   const swiper = useSwiper();
 
   useEffect(() => {
-    getActivities();
+    getMembers();
   }, []);
 
   useEffect(() => {
-    console.log(activities);
-  }, [activities]);
+    console.log(mentors);
+  }, [mentors]);
 
-  function getActivities() {
-    const activitiessCollectionRef = collection(db, "clubActivities");
-    getDocs(activitiessCollectionRef)
+  function getMembers() {
+    const mentorsCollectionRef = collection(db, "devMentors");
+    getDocs(mentorsCollectionRef)
       .then((response) => {
-        const acts = response.docs.map((doc) => ({
+        const membres = response.docs.map((doc) => ({
           data: doc.data(),
           id: doc.id,
         }));
-        setActivities(acts);
+        setMentors(membres);
       })
       .catch((error) => console.log(error.message));
   }
-
   return (
     <div className="flex items-center justify-center flex-col mt-20">
-      <h2 className="text-6xl font-bold text-blue-500 mb-10">Our activities</h2>
+      <h2 className="text-6xl font-bold text-green-500 mb-10">
+        Our Dev Mentors
+      </h2>
       <p className=" mb-10 text-2xl text-gray-500 font-sans text-center max-w-3xl">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio numquam
         quam ex consectetur non, nam iure tempora vel blanditiis possimus atque
@@ -62,19 +63,19 @@ const Acitivities = () => {
           }}
           modules={[Autoplay, Navigation]}
           className="mySwiper">
-          {activities.map((activity) => (
-            <SwiperSlide key={activity.id}>
-              <div className="flex items-center justify-start  flex-col w-60 h-72 shadow-md bg-white rounded-lg">
+          {mentors.map((mentor) => (
+            <SwiperSlide key={mentor.id}>
+              <div className="flex items-center justify-center flex-col w-60 h-72 shadow-md bg-white rounded-lg">
                 <img
-                  src={activity.data.img}
+                  src={mentor.data.img}
                   alt="Profile picture"
-                  className="mb-5 w-full h-[50%]  top-0 border-red-700 border "
+                  className="mb-10 w-24 h-24  rounded-full"
                 />
-                <h4 className="text-2xl font-bold text-gray-800 mb-3">
-                  {activity.data.name}
+                <h4 className="text-xl font-bold text-gray-800 mb-3">
+                  {mentor.data.fullName}
                 </h4>
-                <h5 className=" text-gray-500 font-sans text-center font-light text-sm max-w-[80%]">
-                  {activity.data.resume}
+                <h5 className=" text-gray-500 font-sans text-center font-light">
+                  {mentor.data.role}
                 </h5>
               </div>
             </SwiperSlide>
@@ -90,4 +91,4 @@ const Acitivities = () => {
   );
 };
 
-export default Acitivities;
+export default DevMentors;

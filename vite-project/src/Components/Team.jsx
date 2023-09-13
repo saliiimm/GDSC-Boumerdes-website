@@ -88,12 +88,12 @@ const Team = () => {
         <img
           src={leftBtn}
           className="swiper-button-next cursor-pointer mr-5 2xs:w-6 medi:w-auto"
-          onClick={() => swiper.slideNext()}
+          onClick={() => swiper.slidePrev()}
         />
         <img
           src={rightBtn}
           className="swiper-button-prev cursor-pointer 2xs:w-6 medi:w-auto"
-          onClick={() => swiper.slidePrev()}
+          onClick={() => swiper.slideNext()}
         />
       </div>
     </div>

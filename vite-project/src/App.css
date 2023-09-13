@@ -20,11 +20,11 @@
 .bg-blue {
   background: #4285f4;
 }
-.text-bleu{
+.text-bleu {
   color: #4285f4;
 }
-.text-jaune{
-  color: #FBBC04;
+.text-jaune {
+  color: #fbbc04;
 }
 .bg-blue-2 {
   border-color: #1f69e2;
@@ -61,4 +61,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.myndSwiper .swiper-slide {
+  background-color: transparent;
 }

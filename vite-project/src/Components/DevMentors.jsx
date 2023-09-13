@@ -6,8 +6,8 @@ import "swiper/css";
 import "../App.css";
 import { Autoplay, Navigation } from "swiper/modules";
 import { useSwiper } from "swiper/react";
-import rightBtn from "../assets/rightbutton.svg";
-import leftBtn from "../assets/leftbutton.svg";
+import rightGreenBtn from "../assets/rightGreenBtn.svg";
+import leftGreenBtn from "../assets/leftGreenButton.svg";
 
 const DevMentors = () => {
   const [mentors, setMentors] = useState([]);
@@ -16,10 +16,6 @@ const DevMentors = () => {
   useEffect(() => {
     getMembers();
   }, []);
-
-  useEffect(() => {
-    console.log(mentors);
-  }, [mentors]);
 
   function getMembers() {
     const mentorsCollectionRef = collection(db, "devMentors");
@@ -45,7 +41,7 @@ const DevMentors = () => {
       </p>
       <div className="w-full flex items-center justify-evenly">
         <img
-          src={leftBtn}
+          src={leftGreenBtn}
           className="swiper-button-prev cursor-pointer ml-auto "
           onClick={() => swiper.slidePrev()}
         />
@@ -82,7 +78,7 @@ const DevMentors = () => {
           ))}
         </Swiper>
         <img
-          src={rightBtn}
+          src={rightGreenBtn}
           className="swiper-button-next cursor-pointer mr-auto"
           onClick={() => swiper.slideNext()}
         />

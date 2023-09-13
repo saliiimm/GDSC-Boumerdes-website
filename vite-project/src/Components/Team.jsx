@@ -18,10 +18,6 @@ const Team = () => {
     getMainMembers();
   }, []);
 
-  useEffect(() => {
-    console.log(mainmembers);
-  }, [mainmembers]);
-
   function getMainMembers() {
     const mainCollectionRef = collection(db, "clubMembrers");
     getDocs(mainCollectionRef)

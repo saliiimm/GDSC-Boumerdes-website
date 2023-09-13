@@ -6,8 +6,8 @@ import "swiper/css";
 import "../App.css";
 import { Autoplay, Navigation } from "swiper/modules";
 import { useSwiper } from "swiper/react";
-import rightBtn from "../assets/rightbutton.svg";
-import leftBtn from "../assets/leftbutton.svg";
+import rightBlueBtn from "../assets/rightBlueButton.svg";
+import leftBlueBtn from "../assets/leftBlueButton.svg";
 
 const Acitivities = () => {
   const [activities, setActivities] = useState([]);
@@ -16,10 +16,6 @@ const Acitivities = () => {
   useEffect(() => {
     getActivities();
   }, []);
-
-  useEffect(() => {
-    console.log(activities);
-  }, [activities]);
 
   function getActivities() {
     const activitiessCollectionRef = collection(db, "clubActivities");
@@ -44,7 +40,7 @@ const Acitivities = () => {
       </p>
       <div className="w-full flex items-center justify-evenly">
         <img
-          src={leftBtn}
+          src={leftBlueBtn}
           className="swiper-button-prev cursor-pointer ml-auto "
           onClick={() => swiper.slidePrev()}
         />
@@ -68,7 +64,7 @@ const Acitivities = () => {
                 <img
                   src={activity.data.img}
                   alt="Profile picture"
-                  className="mb-5 w-full h-[50%]  top-0 border-red-700 border "
+                  className="mb-5 w-full h-[50%]  top-0"
                 />
                 <h4 className="text-2xl font-bold text-gray-800 mb-3">
                   {activity.data.name}
@@ -81,7 +77,7 @@ const Acitivities = () => {
           ))}
         </Swiper>
         <img
-          src={rightBtn}
+          src={rightBlueBtn}
           className="swiper-button-next cursor-pointer mr-auto"
           onClick={() => swiper.slideNext()}
         />

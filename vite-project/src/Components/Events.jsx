@@ -36,7 +36,9 @@ const Events = () => {
 
   return (
     <div className="flex items-center justify-center flex-col mt-20">
-      <h2 className="text-6xl font-bold text-yellow-500 mb-20">Events</h2>
+      <h2 className="2xs:text-5xl  medi:text-6xl font-bold text-yellow-500 2xs:mb-5 medi:mb-10">
+        Events
+      </h2>
       <Swiper
         direction={"vertical"}
         autoplay={{
@@ -51,31 +53,43 @@ const Events = () => {
         className="myndSwiper">
         {events.map((event) => (
           <SwiperSlide key={event.id}>
-            <div className="flex justify-content-center h-100% pb-20 w-full   shadow-md rounded-sm">
+            <div className="flex justify-content-center  h-72 pb-20 w-full   shadow-lg  rounded-sm">
               <div className="w-[35%] flex items-center justify-center h-full ">
                 <img
                   src={event.data.picture}
                   alt="Event image"
-                  className="rounded-full h-[60%] w-[60%]"
+                  className="rounded-full medi:h-[60%] medi:w-[60%] 2xs:h-[35%] 2xs:w-[35%]"
                 />
               </div>
               <div className="w-[65%] mt-9">
-                <h3 className="text-2xl font-semibold">{event.data.title}</h3>
-                <div className="flex items-center justify-between w-[70%] mt-2">
-                  <div className="flex items-center justify-center">
-                    <img src={dateIcon} alt="date icon" className="mr-2" />
-                    <p className="text-green-500 font-bold text-sm">
+                <h3 className="medi:text-2xl 2xs:text-lg font-semibold">
+                  {event.data.title}
+                </h3>
+                <div className="flex items-center justify-between lg:w-[70%] medi:w-[100%] mt-2 ">
+                  <div className="flex items-center justify-center 2xs:mr-2 xs:mr-0">
+                    <img
+                      src={dateIcon}
+                      alt="date icon"
+                      className="mr-2  medi:w-auto 2xs:w-3"
+                    />
+                    <p className="text-green-500 font-bold medi:text-sm 2xs:text-xs">
                       {moment(event.data.date.toDate()).format("L")}
                     </p>
                   </div>
                   <div className="flex items-center justify-center">
-                    <img src={PlaceIcon} alt="place icon" className="mr-2" />
-                    <p className="text-yellow-500 font-bold text-sm">
+                    <img
+                      src={PlaceIcon}
+                      alt="place icon"
+                      className="mr-2 medi:w-auto 2xs:w-3"
+                    />
+                    <p className="text-yellow-500 font-bold 2xs:text-[0.35rem] medi:text-xs med:text-sm medi:mr-7 med:mr-3 lg:mr-0">
                       {event.data.place}
                     </p>
                   </div>
                 </div>
-                <p className="mt-4">{event.data.description}</p>
+                <p className="mt-4 2xs:text-[8px] 2xs:mt-1 medi:text-base">
+                  {event.data.description}
+                </p>
               </div>
             </div>
           </SwiperSlide>
@@ -84,12 +98,12 @@ const Events = () => {
       <div className="flex items-center justify-center mt-8">
         <img
           src={upBtn}
-          className="swiper-button-next cursor-pointer mr-8"
+          className="swiper-button-next cursor-pointer mr-5 2xs:w-6 medi:w-auto"
           onClick={() => swiper.slideNext()}
         />
         <img
           src={downBtn}
-          className="swiper-button-prev cursor-pointer"
+          className="swiper-button-prev cursor-pointer 2xs:w-6 medi:w-auto"
           onClick={() => swiper.slidePrev()}
         />
       </div>

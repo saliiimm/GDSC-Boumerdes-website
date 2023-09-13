@@ -53,6 +53,23 @@
   height: 300px;
 }
 
+@media only screen and (max-width: 600px) {
+  .swiper {
+    width: 95%;
+    height: 150px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .myndSwiper.swiper {
+    width: 85%;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .myndSwiper.swiper {
+    width: 87%;
+  }
+}
 .mySwiper .swiper-slide {
   width: fit-content;
   text-align: center;

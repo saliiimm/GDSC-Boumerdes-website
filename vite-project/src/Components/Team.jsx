@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from "react";
 import axios from "axios";
 import { collection, getDocs } from "firebase/firestore";
-import { db } from "../firebase";
+import { db } from "../firebase.hosting";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "../App.css";

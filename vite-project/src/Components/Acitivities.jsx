@@ -43,14 +43,14 @@ const Acitivities = () => {
       <div className="w-full flex items-center justify-evenly">
         <img
           src={leftBlueBtn}
-          className="swiper-button-prev cursor-pointer ml-auto 2xs:hidden medi:w-auto medi:flex "
+          className="swiper-button-prev cursor-pointer sm:ml-[-70%] sm:mt-[-0.2%] 2xs:mb-10  2xs:mt-[70%] 2xs:ml-[-10%] 2xs:absolute   2xs:w-8 medi:w-auto medi:flex "
           onClick={() => swiper.slidePrev()}
         />
         <Swiper
           spaceBetween={0}
           centeredSlides={false}
           autoplay={{
-            delay: 2500,
+            delay: 3500,
             disableOnInteraction: false,
           }}
           slidesPerView={3}
@@ -80,22 +80,11 @@ const Acitivities = () => {
         </Swiper>
         <img
           src={rightBlueBtn}
-          className="swiper-button-next cursor-pointer mr-auto 2xs:hidden medi:w-auto medi:flex"
+          className="swiper-button-next cursor-pointer sm:mr-[-70%] sm:mt-[-0.2%] 2xs:mb-10  2xs:mt-[70%] 2xs:mr-[-10%] 2xs:absolute   2xs:w-8 medi:w-auto medi:flex"
           onClick={() => swiper.slideNext()}
         />
       </div>
-      <div className="flex items-center justify-center mt-4 medi:hidden 2xs:flex">
-        <img
-          src={leftBlueBtn}
-          className="swiper-button-next cursor-pointer mr-5 2xs:w-6 medi:w-auto"
-          onClick={() => swiper.slidePrev()}
-        />
-        <img
-          src={rightBlueBtn}
-          className="swiper-button-prev cursor-pointer 2xs:w-6 medi:w-auto"
-          onClick={() => swiper.slideNext()}
-        />
-      </div>
+     
     </div>
   );
 };

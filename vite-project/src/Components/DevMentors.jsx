@@ -30,7 +30,7 @@ const DevMentors = () => {
       .catch((error) => console.log(error.message));
   }
   return (
-    <div className="flex items-center justify-center flex-col mt-20">
+    <div className="flex items-center justify-center flex-col mt-20 ">
       <h2 className="2xs:text-4xl  medi:text-6xl font-bold text-green-500 2xs:mb-5 medi:mb-10">
         Our Dev Mentors
       </h2>
@@ -39,13 +39,14 @@ const DevMentors = () => {
         quam ex consectetur non, nam iure tempora vel blanditiis possimus atque
         illo
       </p>
-      <div className="w-full flex items-center justify-evenly">
+      <div className="w-full flex items-center justify-evenly ">
         <img
           src={leftGreenBtn}
-          className="swiper-button-prev cursor-pointer ml-auto 2xs:hidden medi:w-auto medi:flex "
+          className="swiper-button-prev cursor-pointer sm:ml-[-70%] sm:mt-[-0.2%] 2xs:mb-10  2xs:mt-[70%] 2xs:ml-[-10%] 2xs:absolute   2xs:w-8 medi:w-auto medi:flex "
           onClick={() => swiper.slidePrev()}
         />
-        <Swiper
+        <Swiper 
+       
           spaceBetween={0}
           centeredSlides={false}
           autoplay={{
@@ -58,7 +59,7 @@ const DevMentors = () => {
             nextEl: ".swiper-button-next",
           }}
           modules={[Autoplay, Navigation]}
-          className="mySwiper">
+          className="mySwiper ">
           {mentors.map((mentor) => (
             <SwiperSlide key={mentor.id}>
               <div className="2xs:w-[6.5rem] h-36 med:w-44 med:h-60 medi:w-32 medi:h-48 flex items-center justify-center flex-col lg:w-60 lg:h-72 shadow-md bg-white rounded-lg">
@@ -79,22 +80,11 @@ const DevMentors = () => {
         </Swiper>
         <img
           src={rightGreenBtn}
-          className="swiper-button-next cursor-pointer mr-auto 2xs:hidden medi:w-auto medi:flex"
+          className="swiper-button-next cursor-pointer sm:mr-[-70%] sm:mt-[-0.2%] 2xs:mr-[-10%] 2xs:absolute 2xs:mt-[70%] 2xs:mb-10 2xs:w-8  medi:w-auto medi:flex"
           onClick={() => swiper.slideNext()}
         />
       </div>
-      <div className="flex items-center justify-center mt-4 medi:hidden 2xs:flex">
-        <img
-          src={leftGreenBtn}
-          className="swiper-button-next cursor-pointer mr-5 2xs:w-6 medi:w-auto"
-          onClick={() => swiper.slidePrev()}
-        />
-        <img
-          src={rightGreenBtn}
-          className="swiper-button-prev cursor-pointer 2xs:w-6 medi:w-auto"
-          onClick={() => swiper.slideNext()}
-        />
-      </div>
+
     </div>
   );
 };

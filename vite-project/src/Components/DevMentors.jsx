@@ -35,9 +35,8 @@ const DevMentors = () => {
         Our Dev Mentors
       </h2>
       <p className="2xs:px-5 2xs:text-xl med:px-0 2xs:mb-5 medi:mb-10 medi:text-2xl text-gray-500 font-sans text-center max-w-3xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio numquam
-        quam ex consectetur non, nam iure tempora vel blanditiis possimus atque
-        illo
+      Meet our developers lead the charge, turning ideas into technological marvels and shaping our tech community's future.
+
       </p>
       <div className="w-full flex items-center justify-evenly ">
         <img
@@ -50,7 +49,7 @@ const DevMentors = () => {
           spaceBetween={0}
           centeredSlides={false}
           autoplay={{
-            delay: 2500,
+            delay: 4000,
             disableOnInteraction: false,
           }}
           slidesPerView={3}

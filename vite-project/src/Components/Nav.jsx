@@ -43,7 +43,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className={`flex px-4 bg-white items-center fixed w-[100%] h-20 justify-between md:px-8 shadow-md z-10`}>
+    <nav className={`flex px-4  bg-white items-center fixed w-[100%] h-20 justify-between md:px-8 shadow-md z-10`}>
       <div>
         <img
           className="w-40 h-5 md:w-52 md:h-6"

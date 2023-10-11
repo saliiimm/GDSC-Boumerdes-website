@@ -36,9 +36,7 @@ const Team = () => {
         Our team
       </h2>
       <p className="2xs:px-5 2xs:text-xl med:px-0 2xs:mb-5 medi:mb-10 medi:text-2xl text-gray-500 font-sans text-center max-w-3xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio numquam
-        quam ex consectetur non, nam iure tempora vel blanditiis possimus atque
-        illo
+      Meet our team is the driving force behind our club's mission, uniting diverse talents to create a vibrant community.
       </p>
       <div className="w-full flex items-center justify-evenly">
         <img
@@ -50,7 +48,7 @@ const Team = () => {
           spaceBetween={0}
           centeredSlides={false}
           autoplay={{
-            delay: 3500,
+            delay: 4000,
             disableOnInteraction: false,
           }}
           slidesPerView={3}

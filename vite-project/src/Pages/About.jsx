@@ -6,7 +6,7 @@ import { Stat } from "../Components/Stat";
 
 function About() {
   return (
-    <div>
+    <div className="bg-gradient-to-tr from-orange-50 to-cyan-100 via-white  overflow-hidden">
       <Nav />
       <div className="title p-[10px] pt-[120px] md:p-[120px]  text-center   ">
         <h1 className=" text-2xl md:text-5xl h1 font-bold leading-normal text-bleu">
@@ -14,8 +14,7 @@ function About() {
           <span className="text-jaune">Boumerdes</span>
         </h1>
       </div>
-      <TextCart style="flex-row" />
-      <TextCart style="flex-row-reverse" />
+      <TextCart  />
       <Stat />
       <Footer />
     </div>

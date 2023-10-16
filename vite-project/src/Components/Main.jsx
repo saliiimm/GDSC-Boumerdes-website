@@ -1,6 +1,7 @@
 import React from "react";
 import mainImage from "../assets/group.svg";
 import "../App.css";
+import { Link } from "react-router-dom";
 
 const Main = () => {
   return (
@@ -12,9 +13,10 @@ const Main = () => {
         <p className="lg:text-xl  med:mt-19 med:mb-5 med:text-2xl text-gray-500 font-sans max-w-xl 2xs:text-xl 2xs:mt-5 2xs:mx-3">
         The Google Developer Student Club at the University of Boumerdes aims to enrich the university experience by promoting inclusivity, knowledge sharing, and diversity in tech. We facilitate connections between students and local businesses while fostering a culture of mentorship. Our core focus is to provide a secure, welcoming space for students from diverse backgrounds to learn and grow together.
         </p>
-        <button className="  bg-green-600 text-white h-14 w-48 text-xl font-bold rounded-xl 2xs:mx-3 2xs:mt-8">
-          Click Here
-        </button>
+        
+        <Link to="/about"><button className="  bg-green-600 text-white h-14 w-48 text-xl font-serif font-bold rounded-xl 2xs:mx-3 2xs:mt-8">
+          About Us
+        </button></Link>
       </div>
       <div className="2xs:hidden md:flex ">
         <img

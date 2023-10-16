@@ -77,7 +77,7 @@ const Nav = () => {
           <li className="text-lg text-gray-600">Events</li>
         </a>
 
-        <a href="#" onClick={handleAboutClick}>
+        <a href="" onClick={handleAboutClick}>
           <li className="text-lg text-gray-600">About</li>
         </a>
         <a href="#contact" onClick={handleHomeClick}>

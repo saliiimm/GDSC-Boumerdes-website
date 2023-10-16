@@ -49,7 +49,7 @@ const DevMentors = () => {
           spaceBetween={0}
           centeredSlides={false}
           autoplay={{
-            delay: 4000,
+            delay: 5500,
             disableOnInteraction: false,
           }}
           slidesPerView={3}

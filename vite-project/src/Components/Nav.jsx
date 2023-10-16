@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import image from '../assets/logo.png';
 import { HiMenu } from 'react-icons/hi';
 import '../App.css';
@@ -41,44 +42,81 @@ const Nav = () => {
       document.body.classList.add('menu-open', 'overlay');
     }
   };
+  const navigate = useNavigate();
+
+  const handleHomeClick = () => {
+    navigate('/');
+  };
+
+  const handleAboutClick = () => {
+    navigate('/about');
+  };
 
   return (
-    <nav className={`flex px-4  bg-white items-center fixed w-[100%] h-20 justify-between md:px-8 shadow-md z-10`}>
+    <nav
+      className={`flex px-4  bg-white items-center fixed w-[100%] h-20 justify-between md:px-8 shadow-md z-10`}>
       <div>
         <img
-          className="w-40 h-5 md:w-52 md:h-6"
+          className="w-40 h-5 md:w-52 md:h-6 cursor-pointer"
           src={image}
           alt="logo"
+          onClick={handleHomeClick}
         />
       </div>
       <ul className="justify-between w-6/12 hidden md:flex">
-        <li className="text-lg text-gray-600">Home</li>
-        <li className="text-lg text-gray-600">Team</li>
-        <li className="text-lg text-gray-600">Activities</li>
-        <li className="text-lg text-gray-600">Events</li>
-        <li className="text-lg text-gray-600">Contact</li>
+        <a href="#main" onClick={handleHomeClick}>
+          <li className="text-lg text-gray-600">Home</li>
+        </a>
+        <a href="#team" onClick={handleHomeClick}>
+          <li className="text-lg text-gray-600">Team</li>
+        </a>
+        <a href="#activities" onClick={handleHomeClick}>
+          <li className="text-lg text-gray-600">Activities</li>
+        </a>
+        <a href="#events" onClick={handleHomeClick}>
+          <li className="text-lg text-gray-600">Events</li>
+        </a>
+
+        <a href="#" onClick={handleAboutClick}>
+          <li className="text-lg text-gray-600">About</li>
+        </a>
+        <a href="#contact" onClick={handleHomeClick}>
+          <li className="text-lg text-gray-600">Contact</li>
+        </a>
       </ul>
       <div className="burger md:hidden" ref={burgerRef}>
-        <HiMenu
-          className="w-7 h-7 text-gray-600"
-          onClick={handleBar}
-        />
+        <HiMenu className="w-7 h-7 text-gray-600" onClick={handleBar} />
       </div>
       <div
         className={`menu-burger  md:hidden w-72 h-[100.3vh] absolute top-[80px] duration-200 right-0 ${navWidth}`}
-        ref={navRef}
-      >
+        ref={navRef}>
         <ul className="bg-white flex gap-10 flex-col h-full items-center pt-7 shadow-lg">
-          <img
-            className="w-40 h-5 md:w-52 md:h-6"
-            src={image}
-            alt="logo"
-          />
-          <li className="text-lg text-gray-600">Home</li>
-          <li className="text-lg text-gray-600">Team</li>
-          <li className="text-lg text-gray-600">Activities</li>
-          <li className="text-lg text-gray-600">Events</li>
-          <li className="text-lg text-gray-600">Contact</li>
+          <a href="#main" onClick={handleHomeClick}>
+            <img
+              className="w-40 h-5 md:w-52 md:h-6 cursor-pointer"
+              src={image}
+              alt="logo"
+            />
+          </a>
+          <a href="#main" onClick={handleHomeClick}>
+            <li className="text-lg text-gray-600">Home</li>
+          </a>
+          <a href="#team" onClick={handleHomeClick}>
+            <li className="text-lg text-gray-600">Team</li>
+          </a>
+          <a href="#activities" onClick={handleHomeClick}>
+            <li className="text-lg text-gray-600">Activities</li>
+          </a>
+          <a href="#events" onClick={handleHomeClick}>
+            <li className="text-lg text-gray-600">Events</li>
+          </a>
+
+          <a href="#" onClick={handleAboutClick}>
+            <li className="text-lg text-gray-600">About</li>
+          </a>
+          <a href="#contact" onClick={handleHomeClick}>
+            <li className="text-lg text-gray-600">Contact</li>
+          </a>
         </ul>
       </div>
     </nav>

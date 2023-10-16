@@ -57,7 +57,7 @@ const Contact = () => {
   });
 
   return (
-    <div className="pb-[200px]">
+    <div className="pb-[200px]" id="contact">
       <h1 className={style.contact}>contact us</h1>
       <div className={style.all}>
         <form

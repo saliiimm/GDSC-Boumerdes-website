@@ -31,7 +31,7 @@ const Team = () => {
       .catch((error) => console.log(error.message));
   }
   return (
-    <div className="flex items-center justify-center flex-col mt-20">
+    <div className="flex items-center justify-center flex-col mt-20 sections" id="team">
       <h2 className="2xs:text-5xl  medi:text-6xl font-bold text-red-500 2xs:mb-5 medi:mb-10">
         Our team
       </h2>

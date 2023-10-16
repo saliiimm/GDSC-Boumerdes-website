@@ -35,45 +35,47 @@ const Events = () => {
   }
 
   return (
-    <div className="flex items-center justify-center flex-col mt-20">
+    <div
+      className="flex items-center justify-center flex-col mt-20 sections"
+      id="events">
       <h2 className="2xs:text-5xl  medi:text-6xl font-bold text-yellow-500 2xs:mb-5 medi:mb-10">
         Events
       </h2>
       <Swiper
-        direction={"vertical"}
+        direction={'vertical'}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
         }}
         navigation={{
-          prevEl: ".swiper-button-prev",
-          nextEl: ".swiper-button-next",
+          prevEl: '.swiper-button-prev',
+          nextEl: '.swiper-button-next',
         }}
         modules={[Autoplay, Navigation]}
         className="myndSwiper">
         {events.map((event) => (
           <SwiperSlide key={event.id}>
-            <div className="flex justify-content-center  h-72 pb-20 w-full   shadow-lg  rounded-sm">
-              <div className="w-[35%] flex items-center justify-center h-full ">
+            <div className="flex justify-content-center  h-72 pb-20 medi:pb-4 w-full   shadow-md  rounded-sm ">
+              <div className="w-[35%] flex items-center justify-center h-full  2xs:h-[150px]">
                 <img
                   src={event.data.picture}
                   alt="Event image"
-                  className="rounded-full medi:h-[60%] medi:w-[60%] 2xs:h-[35%] 2xs:w-[35%]"
+                  className="rounded-full medi:h-[160px] medi:w-[160px] lg:h-[190px] lg:w-[190px] 2xs:h-[70px] 2xs:w-[70px]"
                 />
               </div>
               <div className="w-[65%] mt-9">
-                <h3 className="medi:text-2xl 2xs:text-lg font-semibold">
+                <h3 className="medi:text-2xl 2xs:text-[12px] font-semibold">
                   {event.data.title}
                 </h3>
                 <div className="flex items-center justify-between lg:w-[70%] medi:w-[100%] mt-2 ">
-                  <div className="flex items-center justify-center 2xs:mr-2 xs:mr-0">
+                  <div className="flex items-center justify-center 2xs:mr-0 xs:mr-0">
                     <img
                       src={dateIcon}
                       alt="date icon"
                       className="mr-2  medi:w-auto 2xs:w-3"
                     />
-                    <p className="text-green-500 font-bold medi:text-sm 2xs:text-xs">
-                      {moment(event.data.date.toDate()).format("L")}
+                    <p className="text-green-500 font-bold medi:text-sm 2xs:text-[8px]">
+                      {moment(event.data.date.toDate()).format('L')}
                     </p>
                   </div>
                   <div className="flex items-center justify-center">
@@ -87,7 +89,7 @@ const Events = () => {
                     </p>
                   </div>
                 </div>
-                <p className="mt-4 2xs:text-[8px] 2xs:mt-1 medi:text-base">
+                <p className="mt-4 2xs:text-[6px] 2xs:mt-1 medi:text-base">
                   {event.data.description}
                 </p>
               </div>

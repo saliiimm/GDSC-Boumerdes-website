@@ -4,7 +4,7 @@ import "../App.css";
 
 const Main = () => {
   return (
-    <div className="pt-[80px] grid md:grid-cols-2 mb-5 sm:grid-cols-0">
+    <div className="pt-[80px] grid md:grid-cols-2 mb-5 sm:grid-cols-0" id="main">
       <div className="medi:mt-20 med:pl-15 2xs:pl-3 2xs:mt-5 lg:m-auto lg:mt-20">
         <h2 className="lg:text-5xl medi:text-5xl med:text-6xl font-bold text-green-600 med:mb-10 2xs:text-4xl 2xs:mb-0 2xs:mx-3 uppercase">
           gdsc umbb

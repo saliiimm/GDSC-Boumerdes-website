@@ -5,7 +5,10 @@
 body, html{
 
     overflow-x: hidden;
-  
+  scroll-behavior: smooth;
+}
+.sections{
+    scroll-margin-top: 150px;
 }
 h1{
     font-family: 'Lexend';

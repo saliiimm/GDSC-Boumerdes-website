@@ -8,6 +8,7 @@ export default {
         "xs": "400px",
         "medi": "767px",
         "med": "910px",
+        "x":"1000px",
         "lg": "1440px",
       },
     },

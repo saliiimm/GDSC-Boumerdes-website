@@ -77,9 +77,9 @@ const Nav = () => {
           <li className="text-lg text-gray-600">Events</li>
         </a>
 
-        <a href="" onClick={handleAboutClick}>
+        {/* <a href="" onClick={handleAboutClick}>
           <li className="text-lg text-gray-600">About</li>
-        </a>
+        </a> */}
         <a href="#contact" onClick={handleHomeClick}>
           <li className="text-lg text-gray-600">Contact</li>
         </a>
@@ -111,9 +111,9 @@ const Nav = () => {
             <li className="text-lg text-gray-600">Events</li>
           </a>
 
-          <a href="#" onClick={handleAboutClick}>
+          {/* <a href="" onClick={handleAboutClick}>
             <li className="text-lg text-gray-600">About</li>
-          </a>
+          </a> */}
           <a href="#contact" onClick={handleHomeClick}>
             <li className="text-lg text-gray-600">Contact</li>
           </a>

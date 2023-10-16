@@ -56,7 +56,7 @@ const Events = () => {
         {events.map((event) => (
           <SwiperSlide key={event.id}>
             <div className="flex justify-content-center  h-72 pb-20 medi:pb-4 w-full   shadow-md  rounded-sm ">
-              <div className="w-[35%] flex items-center justify-center h-full  2xs:h-[150px]">
+              <div className="w-[35%] flex items-center justify-center medi:h-full  2xs:h-[150px] ">
                 <img
                   src={event.data.picture}
                   alt="Event image"
